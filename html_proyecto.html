@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Calculalo - reglas de tres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes y librerías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f4e393ccc8.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style_proyecto.css">
+</head>
+
+<body>
+
+    <!-- cabecero -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#calculalo">Calculalo</a></li>
+                <li><a href="#resultado">Resultado</a></li>
+                <li id="logo"><img src="./recursos/Logo_calculalo2.jpg" alt="Logo de la web"></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLknPeFTbfjyLWkAoa5gNp_ovlIKxEpi5p" target="_blank" rel="noopener noreferrer">Tutoriales</a></li>
+                <li><a href="#contactar">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- contenedor de las 2 columnas -->
+    <div id="contenedor-flex">
+
+        <!-- columna izquierda -->
+        <div id="columna-izquierda">
+
+            <!-- Área de cálculo -->
+            <div id="area_calculo">
+                <h2 id="titulo_regla">Regla de tres</h2>
+
+                <div class="ecuacion">
+                    <input type="number" id="valorA" placeholder="A">
+                    <span>----------</span>
+                    <input type="number" id="valorB" placeholder="B">
+                </div>
+
+                <div class="ecuacion">
+                    <input type="number" id="valorC" placeholder="C">
+                    <span>----------</span>
+                    <input type="number" id="valorResultado" placeholder="?" readonly>
+                </div>
+
+                <button onclick="calcular()">Calcular</button>
+            </div>
+
+            <!-- Resultado -->
+            <h3 id="titulo-resultado">Resultado</h3>
+            <div id="resultado">
+                <p class="placeholder">Introduce valores y pulsa Calcular para ver el resultado.</p>
+            </div>
+            
+
+            <!-- Historial -->
+            <h3 id="titulo-historial">Historial</h3>
+            <div id="historial">
+                <p class="placeholder">Aquí aparecerán tus cálculos anteriores.</p>
+            </div>
+
+        </div>
+
+        <!-- columna derecha -->
+        <div id="columna-derecha">
+
+            <h3 id="titulo-explicacion">Cómo hacer una regla de tres</h3>
+
+            <div id="bloque-explicacion">
+                <p>La regla de tres sirve para averiguar un valor desconocido cuando dos cantidades están relacionadas. Es como decir: “Si sé cuánto vale una cosa, puedo averiguar cuánto valen más o menos de esa misma cosa”.</p>
+
+                <p>Cuando dos cosas guardan la misma proporción, puedes escribirlas así:</p>
+                <pre>A → B<br>C → y</pre>
+
+                <p>A y B son una pareja<br>C y y son otra pareja<br>y es lo que queremos encontrar</p>
+
+                <p>Para encontrar y, solo tienes que hacer:</p>
+                <pre>y = (B × C) / A</pre>
+
+                <p>Es decir:</p>
+                <ul>
+                    <li>Multiplica en cruz: B × C</li>
+                    <li>Divide entre el número que queda solo: (B × C) / A</li>
+                </ul>
+
+                <p><strong>Ejemplo rápido:</strong><br>Si 3 cuadernos cuestan 9 euros, ¿cuánto cuestan 5 cuadernos?</p>
+                <pre>3 → 9<br>5 → y</pre>
+            </div>
+
+        </div>
+
+    </div> <!-- fin del contenedor -->
+
+    <!-- formulario de contacto -->
+    <section id="contactar">
+        <h2>Contactanos</h2>
+
+        <form action="#">
+            <div class="itemform">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" minlength="2" maxlength="64" size="32" required>
+            </div>
+
+            <div class="itemform">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" minlength="2" maxlength="128" size="32">
+            </div>
+
+            <div class="itemform">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" minlength="8" maxlength="64" size="32" required>
+            </div>
+
+            <div class="itemform">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" cols="33" rows="5"></textarea>
+            </div>
+
+
+            <div class="itemform">
+                <input type="submit" name="boton" value="CONTACTAR">
+            </div>
+        </form>
+    </section>
+
+    <script src="main_proyecto.js"></script>
+
+</body>
+</html>
