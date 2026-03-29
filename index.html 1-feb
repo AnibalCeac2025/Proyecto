@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Calculalo - Calculadora de regla de tres fácil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Calculadora de regla de tres fácil y rápida. Aprende cómo hacer una regla de tres con ejemplos claros y resuelve proporciones al instante.">
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculalo - Calculadora de regla de tres",
+    "url": "https://tudominio.com",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All",
+    "description": "Calculadora interactiva para resolver reglas de tres con explicación paso a paso y ejemplos.",
+    "inLanguage": "es"
+  }
+  </script>
+
+  <!-- Fuentes y librerías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f4e393ccc8.js" crossorigin="anonymous"></script>
+  
+  <!-- anuncios -->
+        <meta name="google-adsense-account" content="ca-pub-9699126484221063">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9699126484221063"
+         crossorigin="anonymous"></script>
+      <script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+            
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KB86YLKEB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-1KB86YLKEB');
+</script>
+  
+<link rel="icon" type="image/png" href="./recursos/Logo_calculalo2.jpg">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- anuncios -->
+        <amp-auto-ads type="adsense"
+                data-ad-client="ca-pub-9699126484221063">
+        </amp-auto-ads>
+  <!-- cabecero -->
+  <header>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#calculalo">Calculadora</a></li>
+        <li><a href="#resultado">Resultado</a></li>
+        <li id="logo">
+          <a href="https://landing-page.calcula-lo.com/">
+          <img src="./recursos/Logo_calculalo2.jpg" alt="Logo de Calculalo, calculadora de regla de tres">
+          </a> 
+        </li>
+        <li>
+          <a href="https://www.youtube.com/playlist?list=PLknPeFTbfjyLWkAoa5gNp_ovlIKxEpi5p"
+             target="_blank" rel="noopener noreferrer">
+            Tutoriales
+          </a>
+        </li>
+        <li><a href="#contactar">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="calculalo">
+
+    <!-- título principal SEO -->
+    <section aria-labelledby="titulo-principal">
+      <h1 id="titulo-principal">Calculadora de regla de tres fácil y rápida</h1>
+    </section>
+
+    <!-- contenedor de las 2 columnas -->
+    <section id="contenedor-flex" aria-label="Calculadora y explicación de regla de tres">
+
+      <!-- columna izquierda -->
+      <section id="columna-izquierda" aria-label="Área de cálculo y resultados">
+
+        <!-- Área de cálculo -->
+        <article id="area_calculo" aria-labelledby="titulo_regla">
+          <h2 id="titulo_regla">Calculadora de regla de tres</h2>
+
+          <div class="ecuacion">
+            <label for="valorA" class="sr-only">Valor A</label>
+            <input type="number" id="valorA" placeholder="A">
+
+            <span>----------</span>
+
+            <label for="valorB" class="sr-only">Valor B</label>
+            <input type="number" id="valorB" placeholder="B">
+          </div>
+
+          <div class="ecuacion">
+            <label for="valorC" class="sr-only">Valor C</label>
+            <input type="number" id="valorC" placeholder="C">
+
+            <span>----------</span>
+
+            <label for="valorResultado" class="sr-only">Resultado de la regla de tres</label>
+            <input type="number" id="valorResultado" placeholder="Resultado" readonly>
+          </div>
+
+          <button type="button" onclick="calcular()">Calcular</button>
+        </article>
+
+        <!-- Resultado -->
+        <section aria-labelledby="titulo-resultado">
+          <h3 id="titulo-resultado">Resultado</h3>
+          <div id="resultado">
+            <p class="placeholder">Introduce valores y pulsa Calcular para ver el resultado.</p>
+          </div>
+        </section>
+
+        <!-- Historial -->
+        <section aria-labelledby="titulo-historial">
+          <h3 id="titulo-historial">Historial de cálculos</h3>
+          <div id="historial">
+            <p class="placeholder">Aquí aparecerán tus cálculos anteriores.</p>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- columna derecha -->
+      <section id="columna-derecha" aria-label="Explicación de cómo hacer una regla de tres">
+
+        <h2 id="titulo-explicacion">Cómo hacer una regla de tres paso a paso</h2>
+
+        <article id="bloque-explicacion">
+          <p>
+            La regla de tres sirve para averiguar un valor desconocido cuando dos cantidades están relacionadas.
+            Es como decir: “Si sé cuánto vale una cosa, puedo averiguar cuánto valen más o menos de esa misma cosa”.
+          </p>
+
+          <p>Cuando dos cosas guardan la misma proporción, puedes escribirlas así:</p>
+          <pre>A → B<br>C → y</pre>
+
+          <p>
+            A y B son una pareja<br>
+            C e Y son otra pareja<br>
+            y es lo que queremos encontrar.
+          </p>
+
+          <p>Para encontrar y, solo tienes que hacer:</p>
+          <pre>y = (B × C) / A</pre>
+
+          <p>Es decir:</p>
+          <ul>
+            <li>Multiplica en cruz: B × C</li>
+            <li>Divide entre el número que queda solo: (B × C) / A</li>
+          </ul>
+
+          <p>
+            <strong>Ejemplo rápido:</strong><br>
+            Si 3 cuadernos cuestan 9 euros, ¿cuánto cuestan 5 cuadernos?
+          </p>
+          <pre>3 → 9<br>5 → y</pre>
+
+          <img id="mascota-explicacion"
+               src="./recursos/mascota.jpg"
+               alt="Mascota educativa de Calculalo explicando la regla de tres">
+        </article>
+
+      </section>
+
+    </section> 
+    <!-- fin del contenedor -->
+
+    <!-- formulario de contacto -->
+    <section id="contactar" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contáctanos</h2>
+
+      <form id="contact-form" action="#" method="post">
+        <div class="itemform">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" minlength="2" maxlength="64" required>
+        </div>
+
+        <div class="itemform">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" minlength="2" maxlength="128">
+        </div>
+
+        <div class="itemform">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" minlength="8" maxlength="64" required>
+        </div>
+
+        <div class="itemform">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" cols="33" rows="5"></textarea>
+        </div>
+
+        <div class="itemform">
+          <input type="submit" name="boton" value="CONTACTAR">
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Firebase SDK (SIEMPRE primero) -->
+  <script src="https://www.gstatic.com/firebasejs/12.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.8.0/firebase-firestore-compat.js"></script>
+
+  <!-- JS -->
+  <script src="main.js"></script>
+  <script src="basededatos.js"></script>
+
+</body>
+</html>
